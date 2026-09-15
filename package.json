@@ -1,0 +1,33 @@
+{
+  "name": "small-hero",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check web/src scripts vite.config.ts",
+    "format": "biome check --write web/src scripts vite.config.ts",
+    "test": "bun test web/src",
+    "check:all:fix": "bun run format && bun run typecheck && bun run test && bun run build",
+    "dev:all": "bun scripts/dev.ts"
+  },
+  "dependencies": {
+    "@fontsource/cinzel": "5.3.0",
+    "@fontsource/nunito-sans": "5.3.0",
+    "lucide-react": "1.46.0",
+    "phaser": "4.2.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.13",
+    "@types/bun": "1.4.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.0"
+  },
+  "packageManager": "bun@1.4.0"
+}
