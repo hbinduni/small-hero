@@ -23,3 +23,7 @@ check-db:
 build:
 	bun run build
 	cd server && go build -o small-hero-api ./cmd/server
+
+.PHONY: code-vuln
+code-vuln: ## Scan Go dependencies and the selected standard library
+	sh scripts/code-vuln.sh
